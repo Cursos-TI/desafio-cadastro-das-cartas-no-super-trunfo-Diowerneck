@@ -46,6 +46,13 @@ struct Carta carta1 = {
         35
     };
 
+    // Novas variáveis: cálculos adicionais
+    float densidadePopulacional1 = carta1.populacao / carta1.area;
+    float pibPerCapita1 = (carta1.pib * 1000000000) / carta1.populacao;
+
+    float densidadePopulacional2 = carta2.populacao / carta2.area;
+    float pibPerCapita2 = (carta2.pib * 1000000000) / carta2.populacao;
+
     // Exibição dos dados de forma organizada
     printf("\n--- Informações das Cartas ---\n");
 
@@ -57,6 +64,8 @@ struct Carta carta1 = {
     printf("Área: %.2f km²\n", carta1.area);
     printf("PIB: %.2f bilhões de reais\n", carta1.pib);
     printf("Número de Pontos Turísticos: %d\n", carta1.pontosTuristicos);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: R$ %.2f\n", pibPerCapita1);
 
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", carta2.estado);
@@ -66,6 +75,8 @@ struct Carta carta1 = {
     printf("Área: %.2f km²\n", carta2.area);
     printf("PIB: %.2f bilhões de reais\n", carta2.pib);
     printf("Número de Pontos Turísticos: %d\n", carta2.pontosTuristicos);
+    printf("Densidade Populacional: %.2f habitantes/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: R$ %.2f\n", pibPerCapita2);
 
     return 0;
 }
